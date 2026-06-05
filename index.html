@@ -1,0 +1,70 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Weather Forecasting</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="header">
+            <h2 class="logo">THE WEATHER <br><span>FORECASTING</span></h2>
+            <div class="search-box">
+                <input type="text" id="city-name" placeholder="Enter any city / state">
+                <button onclick="getWeather()">Search</button>
+            </div>
+        </header>
+
+        <main class="dashboard">
+            <div class="main-stats">
+                <section class="current-weather">
+                    <div class="city-info">
+                        <h1 id="display-city">Enter Location</h1>
+                        <p id="current-date"></p>
+                    </div>
+                    <div class="temp-display">
+                        <span id="temp-val">--°C</span>
+                        <p id="description">no data</p>
+                    </div>
+                    <div class="weather-icon">☁️</div>
+                </section>
+
+                <section class="air-conditions">
+                    <h3>AIR CONDITIONS</h3>
+                    <div class="conditions-grid">
+                        <div class="cond-item"><span>Real Feel</span><strong id="real-feel">--°C</strong></div>
+                        <div class="cond-item"><span>Wind</span><strong id="wind-speed">-- m/s</strong></div>
+                        <div class="cond-item"><span>Clouds</span><strong id="clouds">--%</strong></div>
+                        <div class="cond-item"><span>Humidity</span><strong id="humidity">--%</strong></div>
+                    </div>
+                </section>
+
+                <section class="hourly-forecast">
+                    <h3>TODAY'S FORECAST</h3>
+                    <div class="hourly-grid" id="hourly-forecast">
+                        <div class="hour-card"><span>06:00</span><br>--<br>--°C</div>
+                        <div class="hour-card"><span>09:00</span><br>--<br>--°C</div>
+                        <div class="hour-card"><span>12:00</span><br>--<br>--°C</div>
+                        <div class="hour-card"><span>15:00</span><br>--<br>--°C</div>
+                        <div class="hour-card"><span>18:00</span><br>--<br>--°C</div>
+                        <div class="hour-card"><span>21:00</span><br>--<br>--°C</div>
+                    </div>
+                </section>
+            </div>
+
+            <aside class="weekly-forecast">
+                <h3>WEEKLY FORECAST</h3>
+                <div id="weekly-list">
+                    <div class="day-row"><span>--</span> <span>--</span> <span>--°C</span></div>
+                    <div class="day-row"><span>--</span> <span>--</span> <span>--°C</span></div>
+                    <div class="day-row"><span>--</span> <span>--</span> <span>--°C</span></div>
+                    <div class="day-row"><span>--</span> <span>--</span> <span>--°C</span></div>
+                    <div class="day-row"><span>--</span> <span>--</span> <span>--°C</span></div>
+                    <div class="day-row"><span>--</span> <span>--</span> <span>--°C</span></div>
+                </div>
+            </aside>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

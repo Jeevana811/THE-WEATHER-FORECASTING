@@ -1,0 +1,124 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0b2447; /* Dark Blue */
+    background-image: radial-gradient(circle at 50% 50%, #19376d 0%, #0b2447 100%);
+    color: white;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.app-container {
+    width: 90%;
+    max-width: 1100px;
+    padding: 20px;
+}
+
+/* --- Header & Search --- */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.search-box input {
+    width: 300px;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    outline: none;
+}
+
+.search-box input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* --- Grid Layout --- */
+.dashboard {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+}
+
+/* Common Card Styling */
+section, aside {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+}
+
+/* --- Current Weather Section --- */
+.current-weather {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.temp-display #temp-val {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+/* --- Air Conditions Section --- */
+.air-conditions .conditions-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.cond-item span {
+    display: block;
+    color: #a5c0dd;
+    font-size: 0.9rem;
+}
+
+/* --- Hourly Forecast Section --- */
+.hourly-grid {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    gap: 10px;
+}
+
+.hour-card {
+    text-align: center;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    flex: 1; /* Allows cards to distribute evenly */
+    min-width: 60px;
+}
+
+/* --- Weekly Forecast Sidebar --- */
+.weekly-forecast {
+    max-height: 600px; /* Adjust based on preference */
+    overflow-y: auto;
+}
+
+/* Custom Scrollbar for the Weekly List */
+.weekly-forecast::-webkit-scrollbar {
+    width: 5px;
+}
+.weekly-forecast::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+}
+
+.day-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.day-row:last-child {
+    border-bottom: none;
+}
